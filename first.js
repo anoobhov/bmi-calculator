@@ -21,26 +21,22 @@ const healthQuotes = [
 ];
 
 const colors = [
-    "#FF5733", // Bright Orange
-    "#33FF57", // Lime Green
-    "#5733FF", // Purple
-    "#F0FF33", // Bright Yellow
-    "#33FFF0", // Cyan
-    "#FF33A6", // Pink
-    "#33A6FF", // Sky Blue
-    "#A633FF", // Violet
-    "#FF8C33", // Coral
-    "#33FF8C", // Mint Green
-    "#8C33FF", // Deep Purple
-    "#FF3333", // Red
-    "#33FF33", // Green
-    "#3333FF", // Blue
-    "#FFBD33", // Gold
-    "#33FFBD", // Aqua
-    "#BD33FF", // Magenta
-    "#FF333A", // Crimson
-    "#33AFFF", // Light Blue
-    "#AFF033"  // Light Green
+"#FF9999", // Light Red
+    "#FFCC99", // Light Coral
+    "#FFFF99", // Light Yellow
+    "#CCFF99", // Light Lime
+    "#99FF99", // Mint Green
+    "#99FFCC", // Aqua
+    "#99FFFF", // Cyan
+    "#99CCFF", // Light Sky Blue
+    "#9999FF", // Lavender
+    "#CC99FF", // Light Purple
+    "#FF99FF", // Pink
+    "#FF99CC", // Light Rose
+    "#FFCCFF", // Light Magenta
+    "#FFFFCC", // Pale Yellow
+    "#CCFFFF", // Pale Blue
+    "#CCFFCC"  // Pale Green
   ]
 
 function generator(){
@@ -52,4 +48,4 @@ let colorIndex = Math.floor(Math.random() * colors.length);
 let card = document.querySelector('.quotes')
 card.style.backgroundColor = colors[colorIndex]
 }
-setInterval(generator,3000)
+setInterval(generator,5000)
