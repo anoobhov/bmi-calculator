@@ -1,3 +1,12 @@
+document.querySelector('button').addEventListener('click',()=>{
+const age = document.getElementById('age').value
+const weight = document.getElementById('weight').value
+const height = document.getElementById('height').value
+
+const bmi = Number(weight)/(Number(height)**2);
+document.querySelector('.result').textContent+=`${bmi}`
+})
+
 const healthQuotes = [
     "Take care of your body. It’s the only place you have to live – unless you’ve mastered teleportation.",
     "An apple a day keeps the doctor away… if you throw it hard enough.",
@@ -11,15 +20,36 @@ const healthQuotes = [
     "Every time you eat is an opportunity to nourish your body – or just carb-load for Netflix marathons."
 ];
 
-document.querySelector('button').addEventListener('click',()=>{
+const colors = [
+    "#FF5733", // Bright Orange
+    "#33FF57", // Lime Green
+    "#5733FF", // Purple
+    "#F0FF33", // Bright Yellow
+    "#33FFF0", // Cyan
+    "#FF33A6", // Pink
+    "#33A6FF", // Sky Blue
+    "#A633FF", // Violet
+    "#FF8C33", // Coral
+    "#33FF8C", // Mint Green
+    "#8C33FF", // Deep Purple
+    "#FF3333", // Red
+    "#33FF33", // Green
+    "#3333FF", // Blue
+    "#FFBD33", // Gold
+    "#33FFBD", // Aqua
+    "#BD33FF", // Magenta
+    "#FF333A", // Crimson
+    "#33AFFF", // Light Blue
+    "#AFF033"  // Light Green
+  ]
 
+function generator(){
+let quote=document.querySelector('.quotes')
+let index = Math.floor(Math.random()*healthQuotes.length)
+quote.textContent = healthQuotes[index]
 
-const age = document.getElementById('age').value
-const weight = document.getElementById('weight').value
-const height = document.getElementById('height').value
-
-const bmi = Number(weight)/(Number(height)**2);
-document.querySelector('.result').textContent+=`${bmi}`
-})
-
-  
+let colorIndex = Math.floor(Math.random() * colors.length);
+let card = document.querySelector('.quotes')
+card.style.backgroundColor = colors[colorIndex]
+}
+setInterval(generator,3000)
